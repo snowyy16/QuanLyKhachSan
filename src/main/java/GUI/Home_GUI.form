@@ -672,7 +672,7 @@
               <Color blue="fe" green="9f" red="19" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="WELCOME BACK"/>
+            <Property name="text" type="java.lang.String" value="WELCOME"/>
           </Properties>
         </Component>
       </SubComponents>
