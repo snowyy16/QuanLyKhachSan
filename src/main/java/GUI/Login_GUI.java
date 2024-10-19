@@ -4,15 +4,21 @@
  */
 package GUI;
 
+import ConnectDB.ConnectDB;
+import DAO.NhanVien_DAO;
+import DAO.TaiKhoan_DAO;
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Admin
  */
 public class Login_GUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Login_GUI
-     */
+    
+    private TaiKhoan_DAO taiKhoanDAO = new TaiKhoan_DAO();
+    private NhanVien_DAO nhanVienDAO = new NhanVien_DAO();
+    
     public Login_GUI() {
         initComponents();
     }
@@ -43,7 +49,7 @@ public class Login_GUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
-        setPreferredSize(new java.awt.Dimension(800, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setOpaque(false);
         jPanel1.setPreferredSize(new java.awt.Dimension(400, 500));
@@ -53,6 +59,8 @@ public class Login_GUI extends javax.swing.JFrame {
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, -10, 400, 540);
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -70,10 +78,10 @@ public class Login_GUI extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 77, 27));
 
         jLabel5.setText("___________________________________________________");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 230, -1));
 
         jLabel6.setText("___________________________________________________");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, 20));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 230, 20));
 
         txtUserName.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtUserName.setBorder(null);
@@ -85,7 +93,7 @@ public class Login_GUI extends javax.swing.JFrame {
         jPanel2.add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 245, 43));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/user.png"))); // NOI18N
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 170, 20, 30));
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, 20, 30));
 
         iconEyeHide.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/eye-hide.png"))); // NOI18N
         iconEyeHide.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -93,7 +101,7 @@ public class Login_GUI extends javax.swing.JFrame {
                 iconEyeHideMouseClicked(evt);
             }
         });
-        jPanel2.add(iconEyeHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, -1, -1));
+        jPanel2.add(iconEyeHide, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
 
         iconEyeShow.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/eye-show.png"))); // NOI18N
         iconEyeShow.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -101,7 +109,7 @@ public class Login_GUI extends javax.swing.JFrame {
                 iconEyeShowMouseClicked(evt);
             }
         });
-        jPanel2.add(iconEyeShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, -1, -1));
+        jPanel2.add(iconEyeShow, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 280, -1, -1));
 
         txtPassword.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtPassword.setBorder(null);
@@ -118,20 +126,7 @@ public class Login_GUI extends javax.swing.JFrame {
         });
         jPanel2.add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 310, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 0, 400, 500));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -160,6 +155,22 @@ public class Login_GUI extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
+        String tenDangNhap = txtUserName.getText();
+        String matKhau = new String(txtPassword.getPassword());
+
+        if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
+            String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
+            if (nhanVienDAO.isManager(maTaiKhoan)) {
+                // Nếu là quản lý, chuyển sang trang chính
+                Home_GUI home = new Home_GUI();  // Đây là trang chính của bạn
+                home.setVisible(true);
+                this.dispose();  // Đóng cửa sổ login
+            } else {
+                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập!");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!");
+        }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**

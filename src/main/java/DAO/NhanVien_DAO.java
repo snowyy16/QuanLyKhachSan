@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package DAO;
+
+import ConnectDB.ConnectDB;
+import java.sql.*;
+
+/**
+ *
+ * @author Admin
+ */
+public class NhanVien_DAO {
+    private ConnectDB dbConnection = new ConnectDB();
+
+    public boolean isManager(String maTaiKhoan) {
+        boolean isManager = false;
+        Connection connection = dbConnection.getConnection();
+        try {
+            String query = "SELECT * FROM NHANVIEN WHERE TaiKhoan=? AND LoaiNhanVien='NV_QUANLY'";
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setString(1, maTaiKhoan);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                isManager = true;
+            }
+        } catch (SQLException e) {
+        }
+        return isManager;
+    }
+}
