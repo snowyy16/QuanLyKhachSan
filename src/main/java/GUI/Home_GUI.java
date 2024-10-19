@@ -429,7 +429,7 @@ public class Home_GUI extends javax.swing.JFrame {
         jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 100)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(25, 159, 254));
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("WELCOME BACK");
+        jLabel17.setText("WELCOMEe");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
