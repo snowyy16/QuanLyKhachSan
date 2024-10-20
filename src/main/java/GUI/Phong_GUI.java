@@ -261,7 +261,7 @@ public class Phong_GUI extends javax.swing.JPanel {
 
         jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel40.setText("Phòng đơn");
-        jLabel40.setMaximumSize(new java.awt.Dimension(73, 40));
+        jLabel40.setMaximumSize(new java.awt.Dimension(100, 40));
         jPanel31.add(jLabel40);
 
         jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
