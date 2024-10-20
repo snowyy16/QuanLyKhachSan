@@ -8,6 +8,8 @@ import ConnectDB.ConnectDB;
 import DAO.NhanVien_DAO;
 import DAO.TaiKhoan_DAO;
 import java.sql.*;
+
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,6 +23,7 @@ public class Login_GUI extends javax.swing.JFrame {
     
     public Login_GUI() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

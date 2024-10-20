@@ -4,8 +4,13 @@
  */
 package GUI;
 
+import java.awt.CardLayout;
 import java.awt.Color;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  *
@@ -13,7 +18,8 @@ import javax.swing.JFrame;
  */
 public class Home_GUI extends javax.swing.JFrame {
 
-    /**
+    private CardLayout cardLayout;
+	/**
      * Creates new form Home_GUI
      */
     public Home_GUI() {
@@ -22,6 +28,12 @@ public class Home_GUI extends javax.swing.JFrame {
         setExtendedState(JFrame.MAXIMIZED_BOTH);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        
+        cardPanel.add(new Phong_GUI(), "room");
+        cardPanel.add(new DichVu_GUI(), "service");
+        
+        
     }  
 
     /**
@@ -46,7 +58,7 @@ public class Home_GUI extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         panelDichVu = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        lbDichVu = new javax.swing.JLabel();
         panelHoaDon = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
@@ -66,8 +78,9 @@ public class Home_GUI extends javax.swing.JFrame {
         jPanel5 = new javax.swing.JPanel();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
+        cardLayout = new CardLayout();
+        cardPanel = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -180,12 +193,18 @@ public class Home_GUI extends javax.swing.JFrame {
         );
 
         panelDichVu.setBackground(new java.awt.Color(255, 255, 255));
+        panelDichVu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        panelDichVu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                panelDichVuMouseClicked(evt);
+            }
+        });
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/service.png"))); // NOI18N
         jLabel7.setText("jLabel5");
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel8.setText("Dịch vụ");
+        lbDichVu.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lbDichVu.setText("Dịch vụ");
 
         javax.swing.GroupLayout panelDichVuLayout = new javax.swing.GroupLayout(panelDichVu);
         panelDichVu.setLayout(panelDichVuLayout);
@@ -195,7 +214,7 @@ public class Home_GUI extends javax.swing.JFrame {
                 .addGap(17, 17, 17)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbDichVu, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelDichVuLayout.setVerticalGroup(
@@ -204,7 +223,7 @@ public class Home_GUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelDichVuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8))
+                    .addComponent(lbDichVu))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -417,7 +436,7 @@ public class Home_GUI extends javax.swing.JFrame {
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelTroGiup, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -426,27 +445,12 @@ public class Home_GUI extends javax.swing.JFrame {
                 .addGap(277, 277, 277))
         );
 
-        jLabel17.setFont(new java.awt.Font("Segoe UI", 3, 100)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(25, 159, 254));
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("WELCOMEe");
+        cardPanel.setLayout(cardLayout);
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 906, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(180, 180, 180)
-                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(257, Short.MAX_VALUE))
-        );
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(25, 159, 254));
+        jLabel4.setText("Welcome to TQSN");
+        cardPanel.add(jLabel4, "card2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -455,17 +459,17 @@ public class Home_GUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addComponent(cardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1027, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cardPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 688, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -476,12 +480,20 @@ public class Home_GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         panelPhong.setBackground(Color.decode("#199FFE"));
         lbPhong.setForeground(Color.white);
+        cardLayout.show(cardPanel, "room");
     }//GEN-LAST:event_panelPhongMouseClicked
 
+    
     private void panelPhongFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_panelPhongFocusGained
         // TODO add your handling code here:
-        
     }//GEN-LAST:event_panelPhongFocusGained
+
+    private void panelDichVuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelDichVuMouseClicked
+        // TODO add your handling code here:
+        panelDichVu.setBackground(Color.decode("#199FFE"));
+        lbDichVu.setForeground(Color.white);
+        cardLayout.show(cardPanel, "service");
+    }//GEN-LAST:event_panelDichVuMouseClicked
 
     /**
      * @param args the command line arguments
@@ -519,6 +531,7 @@ public class Home_GUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel cardPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -527,25 +540,24 @@ public class Home_GUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JLabel lbDichVu;
     private javax.swing.JLabel lbPhong;
     private javax.swing.JPanel panelDichVu;
     private javax.swing.JPanel panelHoaDon;
