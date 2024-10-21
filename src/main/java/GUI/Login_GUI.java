@@ -160,22 +160,6 @@ public class Login_GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         String tenDangNhap = txtUserName.getText();
         String matKhau = new String(txtPassword.getPassword());
-
-//        if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
-//            String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
-//            if (nhanVienDAO.isManager(maTaiKhoan)) {
-//                // Nếu là quản lý, chuyển sang trang chính
-//                Home_GUI home = new Home_GUI();  // Đây là trang chính của bạn
-//                home.setVisible(true);
-//                this.dispose();  // Đóng cửa sổ login
-//            } else {
-//                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập!");
-//            }
-//        } else {
-//            JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!");
-//        }
-
-           
           if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
         String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
         String userRole;
