@@ -161,19 +161,39 @@ public class Login_GUI extends javax.swing.JFrame {
         String tenDangNhap = txtUserName.getText();
         String matKhau = new String(txtPassword.getPassword());
 
-        if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
-            String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
-            if (nhanVienDAO.isManager(maTaiKhoan)) {
-                // Nếu là quản lý, chuyển sang trang chính
-                Home_GUI home = new Home_GUI();  // Đây là trang chính của bạn
-                home.setVisible(true);
-                this.dispose();  // Đóng cửa sổ login
-            } else {
-                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập!");
-            }
+//        if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
+//            String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
+//            if (nhanVienDAO.isManager(maTaiKhoan)) {
+//                // Nếu là quản lý, chuyển sang trang chính
+//                Home_GUI home = new Home_GUI();  // Đây là trang chính của bạn
+//                home.setVisible(true);
+//                this.dispose();  // Đóng cửa sổ login
+//            } else {
+//                JOptionPane.showMessageDialog(null, "Bạn không có quyền truy cập!");
+//            }
+//        } else {
+//            JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!");
+//        }
+
+           
+          if (taiKhoanDAO.checkLogin(tenDangNhap, matKhau)) {
+        String maTaiKhoan = taiKhoanDAO.getTaiKhoanByTenDangNhap(tenDangNhap);
+        String userRole;
+
+        if (nhanVienDAO.isManager(maTaiKhoan)) {
+            userRole = "NV_QUANLY"; // Quản lý
+        } else {
+            userRole = "NV_LETAN"; // Nhân viên
+        }
+
+        // Mở trang chính và truyền vai trò vào Home_GUI
+        Home_GUI home = new Home_GUI(userRole);
+        home.setVisible(true);
+        this.dispose();  // Đóng cửa sổ login
         } else {
             JOptionPane.showMessageDialog(null, "Sai tên đăng nhập hoặc mật khẩu!");
         }
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     /**
