@@ -45,12 +45,10 @@ public class Phong_GUI extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jPanel31 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel42 = new javax.swing.JLabel();
-        jPanel25 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
@@ -161,15 +159,15 @@ public class Phong_GUI extends javax.swing.JPanel {
         jLabel24 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         jLabel94 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jLabel98 = new javax.swing.JLabel();
+        jPanel58 = new javax.swing.JPanel();
         jPanel56 = new javax.swing.JPanel();
         jLabel95 = new javax.swing.JLabel();
         jLabel96 = new javax.swing.JLabel();
         jLabel97 = new javax.swing.JLabel();
         jPanel57 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
-        jPanel22 = new javax.swing.JPanel();
-        jLabel98 = new javax.swing.JLabel();
-        jPanel58 = new javax.swing.JPanel();
         jLabel99 = new javax.swing.JLabel();
         jLabel100 = new javax.swing.JLabel();
         jLabel101 = new javax.swing.JLabel();
@@ -212,6 +210,10 @@ public class Phong_GUI extends javax.swing.JPanel {
         jPanel69 = new javax.swing.JPanel();
         jLabel34 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(1349, 11138));
+
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1276, 1283));
+
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
@@ -239,51 +241,70 @@ public class Phong_GUI extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new java.awt.GridLayout(2, 4, 10, 10));
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel10.setBackground(new java.awt.Color(25, 159, 254));
         jPanel10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(197, 197, 197)));
-        jPanel10.setLayout(new java.awt.BorderLayout());
 
-        jLabel38.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel38.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 20));
-        jLabel38.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel10.add(jLabel38, java.awt.BorderLayout.PAGE_START);
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("P.101");
 
-        jPanel31.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel31.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        jPanel31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel31.setLayout(new javax.swing.BoxLayout(jPanel31, javax.swing.BoxLayout.Y_AXIS));
+        jLabel2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Phòng đơn");
 
-        jLabel39.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel39.setText("P.101");
-        jLabel39.setMaximumSize(new java.awt.Dimension(63, 40));
-        jPanel31.add(jLabel39);
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/watch.png"))); // NOI18N
+        jLabel4.setText("80,000 VND");
 
-        jLabel40.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel40.setText("Phòng đơn");
-        jLabel40.setMaximumSize(new java.awt.Dimension(100, 40));
-        jPanel31.add(jLabel40);
+        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/sun.png"))); // NOI18N
+        jLabel11.setText("300.000 VND");
 
-        jLabel42.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel42.setText("300,000");
-        jLabel42.setMaximumSize(new java.awt.Dimension(100, 40));
-        jPanel31.add(jLabel42);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/IMAGES/three-dots.png"))); // NOI18N
 
-        jPanel25.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel25.setForeground(new java.awt.Color(102, 255, 102));
-        jPanel25.setMaximumSize(new java.awt.Dimension(60, 15));
-        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setText("Sạch");
-        jLabel14.setBorder(javax.swing.BorderFactory.createEmptyBorder(2, 2, 2, 2));
-        jPanel25.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, -1, -1));
-
-        jPanel31.add(jPanel25);
-
-        jPanel10.add(jPanel31, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel10Layout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel11)))
+                        .addContainerGap(59, Short.MAX_VALUE))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(16, 16, 16))))
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addContainerGap(21, Short.MAX_VALUE)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(jPanel10Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(jLabel2)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jLabel11))
+                .addGap(32, 32, 32))
+        );
 
         jPanel2.add(jPanel10);
 
@@ -929,6 +950,23 @@ public class Phong_GUI extends javax.swing.JPanel {
         jLabel94.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel21.add(jLabel94, java.awt.BorderLayout.PAGE_START);
 
+        jPanel3.add(jPanel21);
+
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(197, 197, 197)));
+        jPanel22.setLayout(new java.awt.BorderLayout());
+
+        jLabel98.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel98.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 20));
+        jLabel98.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel22.add(jLabel98, java.awt.BorderLayout.PAGE_START);
+
+        jPanel58.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel58.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        jPanel58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel58.setLayout(new javax.swing.BoxLayout(jPanel58, javax.swing.BoxLayout.Y_AXIS));
+
         jPanel56.setBackground(new java.awt.Color(255, 255, 255));
         jPanel56.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
         jPanel56.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -963,24 +1001,7 @@ public class Phong_GUI extends javax.swing.JPanel {
 
         jPanel56.add(jPanel57);
 
-        jPanel21.add(jPanel56, java.awt.BorderLayout.CENTER);
-
-        jPanel3.add(jPanel21);
-
-        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(197, 197, 197)));
-        jPanel22.setLayout(new java.awt.BorderLayout());
-
-        jLabel98.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel98.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel98.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 20));
-        jLabel98.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel22.add(jLabel98, java.awt.BorderLayout.PAGE_START);
-
-        jPanel58.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel58.setBorder(javax.swing.BorderFactory.createEmptyBorder(10, 10, 10, 10));
-        jPanel58.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel58.setLayout(new javax.swing.BoxLayout(jPanel58, javax.swing.BoxLayout.Y_AXIS));
+        jPanel58.add(jPanel56);
 
         jLabel99.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel99.setText("P.116");
@@ -1288,26 +1309,22 @@ public class Phong_GUI extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1232, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 8, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1056, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 9, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1037, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 10, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(0, 9, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1037, Short.MAX_VALUE)
+                .addGap(0, 10, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
     private javax.swing.JLabel jLabel101;
@@ -1319,6 +1336,7 @@ public class Phong_GUI extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel110;
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
@@ -1336,6 +1354,7 @@ public class Phong_GUI extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -1350,11 +1369,8 @@ public class Phong_GUI extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
@@ -1432,14 +1448,12 @@ public class Phong_GUI extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
-    private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
     private javax.swing.JPanel jPanel34;
