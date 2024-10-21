@@ -9,7 +9,7 @@ package ENTITY;
  * @author 84837
  */
 public enum TrangThaiPhong {
-    PHONG_SU_DUNG("Phong dang duoc su dung"), PHONG_TRONG("Phong trong"), PHONG_DO("Phong chua don ve sinh");
+    PHONG_SU_DUNG("Phong dang duoc su dung"), PHONG_TRONG("Phong trong");
     
     private String trangThaiPhong;
 
