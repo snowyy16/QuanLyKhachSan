@@ -30,4 +30,21 @@ public class NhanVien_DAO {
         }
         return isManager;
     }
+    
+    public boolean isReceptionist(String maTaiKhoan) {
+        boolean isReceptionist = false;
+        Connection connection = dbConnection.getConnection();
+        try {
+            String query = "SELECT * FROM NHANVIEN WHERE TaiKhoan=? AND LoaiNhanVien='NV_LETAN'";
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setString(1, maTaiKhoan);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                isReceptionist = true;
+            }
+        } catch (SQLException e) {
+        }
+        return isReceptionist;
+    }
 }
